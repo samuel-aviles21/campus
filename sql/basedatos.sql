@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS my_database;
+CREATE DATABASE IF NOT EXISTS campus;
 USE my_database;
 
 -- Crear la tabla USUARIOS
