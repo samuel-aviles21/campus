@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS campus;
-USE my_database;
+USE campus;
 
 -- Crear la tabla USUARIOS
 CREATE TABLE USUARIOS (
@@ -51,5 +51,5 @@ INSERT INTO COMENTARIOS (ID_USUARIO, ID_PROFE, COMENTARIO) VALUES
 INSERT INTO DOCUMENTOS (ID_PROF, ID_ESTUDIANTE, FECHA_EXAMEN, RUTA_ARCHIVO, DESCRIPCION) VALUES
 (1, 1, '2024-05-19', '/ruta/archivo1', 'Descripcion del documento 1'),
 (2, 2, '2024-06-19', '/ruta/archivo2', 'Descripcion del documento 2');
-USE my_database;
+USE campus;
 select * from DOCUMENTOS;
