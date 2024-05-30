@@ -1,2 +1,2 @@
-![image](https://github.com/samuel-aviles21/campus/assets/65872799/20a57e16-3d94-4485-8e85-19037c175744)
+![Group 5](https://github.com/samuel-aviles21/campus/assets/65872799/3bb38e57-d596-42e0-b2ff-81bba8d407a4)
 
