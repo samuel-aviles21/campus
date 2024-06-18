@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import modelo.Dao;
 import modelo.Profesor;
 import modelo.Usuario;
-import sun.security.provider.certpath.ResponderId;
 
 /**
  *
@@ -222,8 +221,8 @@ public class Control extends HttpServlet {
             dao.registerUser(nombre, correo, password);
             Usuario nuevoUsuario = dao.inicioUsuario(dao.verificarUsuario(nombre, password));
             HttpSession session = request.getSession();
-            session.setAttribute("usuario", nuevoUsuario);
-            String pag = "paginaPrincipalUsuario.jsp";
+            session.setAttribute("estudiante", nuevoUsuario);
+            String pag = "paginaPrincipal.jsp";
             request.getRequestDispatcher(pag).forward(request, response);
         }
     }
