@@ -10,19 +10,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styleComentarios.css">
         <link rel="shortcut icon" href="images/faviconcampus.png" type="image/x-icon">
         <title>Campus</title>
     </head>
     <body>
         <%
-            Profesor profesor=(Profesor)session.getAttribute("perfil");
-            Usuario estudiante=(Usuario)session.getAttribute("estudiante");
-            String estado="0";
-            if(estudiante==null){
-                estado="0";
-            }else{
-                estado="1";
+            Profesor profesor = (Profesor) session.getAttribute("perfil");
+            Usuario estudiante = (Usuario) session.getAttribute("estudiante");
+            String estado = "0";
+            if (estudiante == null) {
+                estado = "0";
+            } else {
+                estado = "1";
             }
             //session.removeAttribute("perfil");
         %>
@@ -113,34 +113,32 @@
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                 <form action="Control">
-                                     <input type="hidden" name="action" value="12">
-                                     <input type="hidden" name="status" value="<%=estado%>">
-                                     <%
-                                         if (estudiante!=null) {
-                                                 out.print("<input type='hidden' name='user' value='"+estudiante.getIdUsuario()+"'>");
-                                             }
-                                     %>
-                                     <input type="hidden" name="idpf" value="<%=profesor.getId_profe()%>">
-                                     <textarea type="text" name="comentario" placeholder="Escribe un comentario aqui"></textarea>
-                                     <input type="submit" value="Comentar">
-                                 </form>
-                             </div>
-                            <%
-                                Dao dao = new Dao();
-                                List<Comentario> comentarios = dao.cargarComentarios(profesor.getId_profe());
-                                for (Comentario comentario : comentarios) {
-                                    Usuario usuario = dao.inicioUsuario(comentario.getIdUsuario());
-                                    out.print("<div class='tab-pane fade show active' id='home-tab-pane' role='tabpanel' aria-labelledby='home-tab' tabindex='0'>"
-                                            +"<p>"+usuario.getNombreUsuario()+"</p>" 
-                                            +"<p>" + comentario.getComentario() + "</p></div>");
-                                }
-                            %>
-<!--                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                <p>Hola</p>
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <form action="Control" class="mb-3">
+                                    <input type="hidden" name="action" value="12">
+                                    <input type="hidden" name="status" value="<%=estado%>">
+                                    <%
+                                        if (estudiante != null) {
+                                            out.print("<input type='hidden' name='user' value='" + estudiante.getIdUsuario() + "'>");
+                                            out.print("<label for='exampleFormControlTextarea1' class='form-label'>" + estudiante.getNombreUsuario() + "</label>");
+                                        }
+                                    %>
+                                    <input type="hidden" name="idpf" value="<%=profesor.getId_profe()%>">
+                                    <textarea class="form-control" id="FormControlMensaje" rows="3" name="comentario" placeholder="Escribe un comentario aqui.."></textarea>
+                                    <div class='d-grid gap-2 d-md-block'>
+                                        <input type="submit" value="Comentar" class="btn btn-primary">
+                                    </div>
+                                </form>
+                                <%
+                                    Dao dao = new Dao();
+                                    List<Comentario> comentarios = dao.cargarComentarios(profesor.getId_profe());
+                                    for (Comentario comentario : comentarios) {
+                                        Usuario usuario = dao.inicioUsuario(comentario.getIdUsuario());
+                                        out.print("<div class='card'><div class='card-header'>" + usuario.getNombreUsuario() + "</div><div class='card-body'>"
+                                                + "<p class='card-text'>" + comentario.getComentario() + "</p></div></div>");
+                                    }
+                                %>
                             </div>
--->
                             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                             </div>
                         </div>
