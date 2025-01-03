@@ -1,0 +1,361 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-azul:#014eaa;
+    --color-azul-claro:#0d6efd;
+    --color-azulizo:#2764c1;
+    --color-blanco:#ffffff;
+    --color-negro:#000000;
+    --color-plomo: #777777;
+    --color-plomo-claro: #bcb8b8;
+    --color-gris-medio:#808080;
+    --color-gris-claro:#e8e8e8;
+	--color-rojo:#D01A49;
+    
+    --fuente-principal:"Montserrat", sans-serif;
+    --fuente-secundaria:"Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cabecera {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#cabecera .d-grid {
+    padding: 8px 0;
+}
+
+#cabecera i {
+    font-size: 18px;
+    display: inline-flex;
+}
+
+#cabecera .active {
+	background-color: var(--color-blanco);
+	color: var(--color-negro)!important;
+}
+
+#head-teacher .form-control {
+    border: 2px solid var(--color-gris-medio);
+    width: 300px;
+}
+
+#head-teacher .btn-outline-success {
+    color: var(--color-blanco);
+    background-color: var(--color-azul-claro);
+    border: none;
+}
+
+#head-teacher .btn-outline-success:hover {
+    background-color: var(--color-azul);
+    border: none;
+}
+
+#head-teacher {
+    padding-top: 15px;
+    justify-content: center;
+
+}
+
+#head-teacher .button-add {
+    padding: 8px 0;
+}
+
+#reseñas {
+    justify-content:space-between;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.columna i {
+    display: flex;
+    font-size: 8.125rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#reseñas h1 {
+    font-size: 36px;
+}
+
+#reseñas h3 {
+    font-size: 20px;
+}
+
+#reseñas h5 {
+    font-size: 14px;
+}
+
+#reseñas .card-header{
+    background-color: var(--color-azulizo);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+#reseñas .mb-3 {
+    padding-top: 10px;
+}
+
+#reseñas .d-grid {
+    padding-top: 20px;
+    margin-bottom: 40px
+}
+
+#reseñas label {
+    font-weight: bold;
+}
+
+#reseñas .nav-link {
+    color: var(--color-plomo);    
+}
+
+#reseñas .nav-link:hover {
+    color: var(--color-negro);
+}
+
+#reseñas .active {
+    background-color: var(--color-gris-claro);
+    color: var(--color-negro)!important;
+}
+
+#reseñas .list-group {
+    padding-top: 10px;
+}
+
+#reseñas .list-group i {
+    justify-content: flex-start;
+    text-align: start;
+    font-size: 18px;
+}
+
+#reseñas .list-group-item {
+    font-weight: bold;
+}
+
+#home-tab-pane .card {
+    margin-top: 15px;
+}
+
+#home-tab-pane {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#reseñas .tab-pane {
+    background-color: transparent;
+}
+
+#busqueda {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.contenedor {
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.ajustar-imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-brand {
+	width: 200px;
+}
+
+.navbar-collapse {
+    width: 50%;;
+	justify-content: flex-start;
+}
+
+.nav-link {
+    font-size: 16px;
+	color: var(--color-blanco);
+	margin: 0px 5px;
+	border-radius: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn-white {
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.nav-link:hover {
+	background-color: var(--color-blanco);
+	color: var(--color-negro);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    width: 330px; 
+    height: auto;
+}
+
+.description{
+    margin-bottom: 50px
+}
+
+.description p {
+    font-size: 18px;
+    color: #0a0606;
+    margin: 10px 0;
+    text-align: center;
+    font-family: var(--fuente-secundaria);
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 30px
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: fixed;
+    background-color: #f8f8f8;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(223, 12, 12, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav a {
+    margin-left: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna {
+	flex-basis: 0;
+	flex-grow: 1;
+
+	/* Espaciado entre las cajas */
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.columna15 {
+    flex-basis: 15%;
+    max-width: 15%;
+}
+
+.columna35 {
+    flex-basis: 35%;
+    max-width: 35%;
+}
+
+.columna50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.columna33 {
+	flex-basis: 33.33%;
+	max-width: 33.33%;
+}
+
+.buscar{
+    margin-top: 100px
+}
+
+.file-link {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.file-link i {
+    margin-right: 10px;
+}
+
+.file-link a {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+#reseñas .accordion-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
